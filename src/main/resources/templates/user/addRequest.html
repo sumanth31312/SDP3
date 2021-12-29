@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/base::layout(~{::section})">
+<head>
+	
+</head>
+<body>
+
+<section>
+		<h2>Adding A Request</h2>
+		<hr>
+		<div class="course-section">
+		
+			<form class="needs-validation" action='saveRequest' method="post">
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom01">Request By</label>
+      <input type="text" class="form-control " id="validationCustom01" placeholder="Request By" name="requestBy" th:value="${user.email}" required>
+      
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Request type</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="request type" name="requestType" required>
+      
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom04">Quantity/Amount</label>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Quantity/Amount" name="quantity" required>
+     
+   
+    </div>
+  </div>
+ <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Request</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="Request" name="request" required>
+      
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom04">Address</label>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Address" name="address" required>
+     
+   
+    </div>
+  </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Add Request</button>
+</form>
+			
+		</div>
+</section>
+
+</body>
+</html>

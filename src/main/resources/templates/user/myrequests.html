@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/base::layout(~{::section})">
+<head>
+	 
+</head>
+<body>
+
+<section>
+		<h2>My Requests</h2>
+		<hr>
+		<table class="table table-striped">
+		  <thead>
+		    <tr class="table-info">
+		      <th scope="col">#</th>
+		       <th scope="col">Requested Thing</th>
+		      <th scope="col">Added Date</th>
+		      <th scope="col">Address</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr th:each="p : ${myrlist}">
+		    	<th th:text="${pStat.index+1}"></th>
+		      <th scope="row" th:text="${p.request}">1</th>
+		      <th scope="row" th:text="${p.addedDate}">1</th>
+		       <th scope="row" th:text="${p.address}">1</th>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</section>
+
+</body>
+</html>

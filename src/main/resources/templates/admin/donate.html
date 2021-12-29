@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="admin/base::layout(~{::section})">
+<head>
+	 
+</head>
+<body>
+
+<section>
+		<h2>Donations</h2>
+		<hr>
+		<table class="table table-striped">
+		  <thead>
+		    <tr class="table-info">
+		      <th scope="col">#</th>
+		      <th scope="col">Donated By</th>
+		      <th scope="col">Donated To</th>
+		       <th scope="col">Donated Thing</th>
+		      <th scope="col">Donated Date</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr th:each="p : ${dlist}">
+		    	<th th:text="${pStat.index+1}"></th>
+		      <th scope="row" th:text="${p.donatedBy}">1</th>
+		      <th scope="row" th:text="${p.donatedTo}">1</th>
+		      <th scope="row" th:text="${p.donatedValue}">1</th>
+		      <th scope="row" th:text="${p.donatedDate}">1</th>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</section>
+
+</body>
+</html>
